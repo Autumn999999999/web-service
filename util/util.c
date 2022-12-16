@@ -14,3 +14,12 @@ int transfer_str_to_int(char *str) {
     }
     return num;
 }
+
+void print_banner() {
+    FILE *fp = fopen("banner.txt", "r");
+    char str[4096];
+    while (fgets(str, 4096, fp) != NULL) {
+        log_info(str);
+    }
+    fclose(fp);
+}
