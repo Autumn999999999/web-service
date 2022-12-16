@@ -4,6 +4,7 @@
 #include "../net/net.h"
 #include "../util/util.h"
 #include "../log/log.h"
+#include "../core/core.h"
 
 
 #define StatusOK 200

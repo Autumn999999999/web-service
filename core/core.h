@@ -23,4 +23,6 @@ void response_item_json(struct Response *resp,struct Item *items,int len);
 void save_item(struct Item *items,int len);
 int read_item(struct Item *items);
 
+void register_routes();
+
 #endif //WEB_SERVER_CORE_H

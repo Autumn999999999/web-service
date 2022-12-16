@@ -15,6 +15,7 @@ int serveHTTP(char *port) {
 
     log_info("server started");
     print_banner();
+    register_routes();
 
     do{
         SOCKET ClientSocket = INVALID_SOCKET;

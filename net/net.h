@@ -7,8 +7,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#pragma comment (lib, "Ws2_32.lib")
-
 // 默认接收的请求大小
 #define DEFAULT_BUFLEN 512
 // 指定监听端口
