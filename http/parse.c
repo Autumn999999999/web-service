@@ -50,6 +50,7 @@ int parse_body(struct Request *req) {
     req->bodyForms = parse_form(body, &req->bodyFormCount);
 }
 
+// 读取并解析请求
 struct Request *parse_request(SOCKET ClientSocket) {
     int iResult;
     char recvbuf[DEFAULT_BUFLEN];

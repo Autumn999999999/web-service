@@ -6,3 +6,11 @@ char *transfer_int_to_str(int num) {
     sprintf(str, "%d", num);
     return str;
 }
+
+int transfer_str_to_int(char *str) {
+    int num = 0;
+    for (int i = 0; i < strlen(str); i++) {
+        num = num * 10 + (str[i] - '0');
+    }
+    return num;
+}

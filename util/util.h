@@ -9,5 +9,6 @@
 #define ERR -1
 
 char *transfer_int_to_str(int num);
+int transfer_str_to_int(char *str);
 
 #endif //WEB_SERVER_UTIL_H

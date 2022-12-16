@@ -13,6 +13,8 @@ int serveHTTP(char *port) {
         return ERR;
     }
 
+    log_info("server started");
+
     do{
         SOCKET ClientSocket = INVALID_SOCKET;
 

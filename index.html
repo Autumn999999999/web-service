@@ -5,22 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Hello hehe</h1>
-
-<script>
-    // ajax
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:3000/', true);
-    xhr.send();
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            console.log(xhr.responseText);
-        }
-    }
-
-    var a = json.parse('{"name":"test"}');
-
-</script>
-
+    <form action="http://localhost:3000/item" method="post">
+        <input type="text" name="content" placeholder="content">
+        <input type="text" name="money" placeholder="money">
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
+localhost:3000/item?order=1
