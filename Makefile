@@ -1,16 +1,30 @@
+# 目标exe
 TARGET = web-server.exe
-OBJ = http/*.c log/*.c net/*.c util/*.c core/*.c *.c
+
+# 框架源文件
+HTTP = http/*.c http/request/*.c http/route/*.c http/response/*.c http/form/*.c http/type/*.c \
+log/*.c \
+net/*.c \
+util/*.c \
+strings/*.c
+
+# 核心功能实现源文件
+CORE = src/core/*.c src/main.c $(HTTP)
+
+# 案例源文件
+EXAMPLE = example/*.c $(HTTP)
 
 
-.PHONY: start
 start: build
 	./$(TARGET)
 
-.PHONY: build
-build:
-	gcc $(OBJ) -lws2_32 -o $(TARGET)
+test:
+	gcc $(EXAMPLE) -lws2_32 -o $(TARGET)
+	./$(TARGET)
 
-.PHONY: clean
+build:
+	gcc $(CORE) -lws2_32 -o $(TARGET)
+
 clean:
 	rm *.exe
 

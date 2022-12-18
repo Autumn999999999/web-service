@@ -1,9 +1,11 @@
 #include "log.h"
 
+// 日志的输出文件，如果不指定则默认为标准输出，也就是stdout
 FILE **writers;
+// 日志的输出文件的数量
 int writerCount = 0;
 
-
+// 打印黑色信息
 void log_msg(char *msg) {
     if (writerCount == 0) {
         printf("%s\n",msg);

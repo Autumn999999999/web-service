@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 // 默认接收的请求大小
-#define DEFAULT_BUFLEN 512
+#define DEFAULT_BUFLEN 1024
 // 指定监听端口
 #define DEFAULT_PORT "3000"
 

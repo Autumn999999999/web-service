@@ -6,6 +6,7 @@
 #include "stdio.h"
 #include "../log/log.h"
 
+// 定义了错误和正确
 #define OK 0
 #define ERR -1
 
