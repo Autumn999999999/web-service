@@ -4,7 +4,7 @@
 #pragma comment (lib, "Ws2_32.lib")
 
 void helloWorld(struct Request *req, struct Response *resp) {
-    response_string(resp, StatusOK,"Hello World!");
+    response_string(resp, StatusOK,"{\"Hello\":\"World\"}");
 }
 
 void SayHello(struct Request *req, struct Response *resp) {

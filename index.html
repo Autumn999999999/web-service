@@ -11,69 +11,86 @@
 <div id="app">
     <v-chart autoresize :option="option" />
 </div>
-<script src="https://cdn.jsdelivr.net/npm/vue@3.2.37"></script>
-<script src="https://cdn.jsdelivr.net/npm/echarts@5.3.3"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue-echarts@6.2.3"></script>
 
-<script>
-    Vue.createApp({
-        data() {
-            return {
-                option: {
-                    textStyle: {
-                        fontFamily: 'Inter, "Helvetica Neue", Arial, sans-serif',
-                    },
-                    title: {
-                        text: '收支统计',
-                        left: 'center',
-                    },
-                    tooltip: {
-                        trigger: 'item',
-                        formatter: '{a} <br/>{b} : {c} ({d}%)',
-                    },
-                    legend: {
-                        orient: 'vertical',
-                        left: 'left',
-                        data: [
-                            '饮食',
-                            '购物',
-                            '交通',
-                            '住宿',
-                            '娱乐',
-                        ],
-                    },
-                    series: [
-                        {
-                            name: 'Traffic Sources',
-                            key: 'pie',
-                            radius: '55%',
-                            center: ['50%', '60%'],
-                            data: [
-                                { value: 335, name: '饮食' },
-                                { value: 310, name: '购物' },
-                                { value: 234, name: '交通' },
-                                { value: 135, name: '住宿' },
-                                { value: 1548, name: '娱乐' },
-                            ],
-                            emphasis: {
-                                itemStyle: {
-                                    shadowBlur: 10,
-                                    shadowOffsetX: 0,
-                                    shadowColor: 'rgba(0, 0, 0, 0.5)',
-                                },
-                            },
-                        },
-                    ],
-                },
-            };
-        },
-    })
-        .component('v-chart', VueECharts)
-        .mount('#app');
-</script>
-<script src="https://cdn.jsdelivr.net/npm/vue@3.2.37"></script>
-<script src="https://cdn.jsdelivr.net/npm/echarts@5.3.3"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue-echarts@6.2.4"></script>
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-</body>
+<form class="yourInput" action="http://localhost:3000/saveItem" method="post">
+    
+    <div id="money">
+        <input type="text" placeholder="money" name="money">
+    </div>
+    <div id="type">
+        <input type="text" placeholder="type" name="type">
+    </div>
+    <div id="consumptionType">
+        <input type="text" placeholder="consumptionType" name="consumptionType">
+    </div>
+    <div id="add">
+        <button type="submit">add</button>
+        <a href="result.html">the result<a>
+        </form>
+
+</div>
+
+
+
+ <!-- <script>
+    fetch('http://localhost:3000/hello')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+ </script>  -->
+
+
 </html>
+<style>
+   *{
+    margin:0ch;
+    padding:0ch;
+}
+body{
+    background:radial-gradient(circle,#adc0cf,#7d94a6);
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.yourInput{
+    flex-direction: column;
+    display:flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(240, 248, 255, 0.508);
+    border-radius: 15px;
+    align-items: center;
+    width: 350px;
+    height: 450px;
+    
+}
+.yourInput input{
+    width: 280px;
+    height: 30px;
+    text-indent: 8px;
+ border: none;
+
+    outline: none;
+    margin: 12px ;
+
+}
+.yourInput button{
+    width: 150px;
+    height: 40px;
+    margin: 10px 40px;
+    border: none;
+    background: linear-gradient(-200deg, rgb(179, 215, 232),rgb(39, 68, 72));
+    color: aliceblue;
+    transition: 1s;
+    border-radius: 15px;
+}
+.yourInput button:hover{
+    background: linear-gradient(-200deg, rgb(22, 36, 43),rgb(179, 215, 232));
+    background-position-x: -280px ;}
+  
+</style>

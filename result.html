@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+</head>
+
+<body>
+    <p>xxx</p>
+    <a href="index.html">return<a></a>
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script>
+         var myChart = echarts.init(document.getElementById('main'));
+myChart.setOption({
+    series : [
+        {
+            name: '访问来源',
+            type: 'pie',    // 设置图表类型为饼图
+            radius: '55%',  // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
+            data:[          // 数据数组，name 为数据项名称，value 为数据项值
+                {value:235, name:'meal'},
+                {value:274, name:'entertainment'},
+                {value:310, name:'shop'},
+                {value:335, name:'others'},
+                
+            ]
+        }
+    ]
+})</script>
+</body>
+
+
+</html>
